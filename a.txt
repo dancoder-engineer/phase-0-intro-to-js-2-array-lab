@@ -1,0 +1,117 @@
+
+> js-data-structures-arrays-lab@0.1.0 test
+> mocha --timeout 5000 -R mocha-multi --reporter-options spec=-,json=.results.json
+
+
+
+  index.js
+    cats
+      ✓ is assigned an initial value of ["Milo", "Otis", "Garfield"]
+    Array functions
+      destructivelyAppendCat(name)
+        ✓ appends a cat to the end of the cats array
+      destructivelyPrependCat(name)
+        1) prepends a cat to the beginning of the cats array
+      destructivelyRemoveLastCat()
+        2) removes the last cat from the cats array
+      destructivelyRemoveFirstCat()
+        3) removes the first cat from the cats array
+      appendCat(name)
+        4) appends a cat to the cats array and returns a new array, leaving the cats array unchanged
+      prependCat(name)
+        5) prepends a cat to the cats array and returns a new array, leaving the cats array unchanged
+      removeLastCat()
+        6) removes the last cat in the cats array and returns a new array, leaving the cats array unchanged
+      removeFirstCat()
+        7) removes the first cat from the cats array and returns a new array, leaving the cats array unchanged
+
+
+  2 passing (239ms)
+  7 failing
+
+  1) index.js
+       Array functions
+         destructivelyPrependCat(name)
+           prepends a cat to the beginning of the cats array:
+
+      AssertionError: expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Bob', 'Milo', 'Otis', 'Garfield' ]
+      + expected - actual
+
+       [
+      +  "Bob"
+         "Milo"
+         "Otis"
+         "Garfield"
+       ]
+      
+      at Context.<anonymous> (test/indexTest.js:27:38)
+      at processImmediate (node:internal/timers:464:21)
+
+  2) index.js
+       Array functions
+         destructivelyRemoveLastCat()
+           removes the last cat from the cats array:
+
+      AssertionError: expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Milo', 'Otis' ]
+      + expected - actual
+
+       [
+         "Milo"
+         "Otis"
+      -  "Garfield"
+       ]
+      
+      at Context.<anonymous> (test/indexTest.js:35:38)
+      at processImmediate (node:internal/timers:464:21)
+
+  3) index.js
+       Array functions
+         destructivelyRemoveFirstCat()
+           removes the first cat from the cats array:
+
+      AssertionError: expected [ 'Milo', 'Otis', 'Garfield' ] to have the same ordered members as [ 'Otis', 'Garfield' ]
+      + expected - actual
+
+       [
+      -  "Milo"
+         "Otis"
+         "Garfield"
+       ]
+      
+      at Context.<anonymous> (test/indexTest.js:43:38)
+      at processImmediate (node:internal/timers:464:21)
+
+  4) index.js
+       Array functions
+         appendCat(name)
+           appends a cat to the cats array and returns a new array, leaving the cats array unchanged:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:49:52)
+      at processImmediate (node:internal/timers:464:21)
+
+  5) index.js
+       Array functions
+         prependCat(name)
+           prepends a cat to the cats array and returns a new array, leaving the cats array unchanged:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:57:54)
+      at processImmediate (node:internal/timers:464:21)
+
+  6) index.js
+       Array functions
+         removeLastCat()
+           removes the last cat in the cats array and returns a new array, leaving the cats array unchanged:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:65:49)
+      at processImmediate (node:internal/timers:464:21)
+
+  7) index.js
+       Array functions
+         removeFirstCat()
+           removes the first cat from the cats array and returns a new array, leaving the cats array unchanged:
+     AssertionError: expected undefined to be an array
+      at Context.<anonymous> (test/indexTest.js:73:50)
+      at processImmediate (node:internal/timers:464:21)
+
+
+
